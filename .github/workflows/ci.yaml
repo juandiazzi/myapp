@@ -4,7 +4,8 @@ on: push
   #   types: [test-event]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Build
-      run: echo "Building the project..."
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building the project..."
