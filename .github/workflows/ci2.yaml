@@ -1,0 +1,9 @@
+name: CI Workflow
+on: push
+
+jobs:
+  build2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building the project..."

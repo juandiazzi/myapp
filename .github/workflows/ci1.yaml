@@ -1,10 +1,10 @@
 name: CI Workflow
-on: push
-  # repository_dispatch:
-  #   types: [test-event]
+on:
+  repository_dispatch:
+    types: [test-event]
 
 jobs:
-  build:
+  build1:
     runs-on: ubuntu-latest
     steps:
       - name: Build
