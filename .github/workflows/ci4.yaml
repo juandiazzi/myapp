@@ -7,4 +7,3 @@ jobs:
     steps:
       - name: Step 1
         run: echo "Building the project..."
-
