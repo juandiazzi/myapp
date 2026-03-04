@@ -1,5 +1,5 @@
-name: Workflow Push 2
-on: push
+name: Workflow Pull Request 2
+on: pull_request
 
 jobs:
   build:
