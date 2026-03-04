@@ -2,8 +2,11 @@ name: CI Workflow Push
 on: push
 
 jobs:
-  build2:
+  build:
     runs-on: ubuntu-latest
+    environment: development
     steps:
       - name: Build
-        run: echo "Building the project..."
+        run: |
+          echo SECRET:${{ secrets.SOMETHING_SECRET }}
+          echo VARAIBLE:${{ variables.SOMETHING_VARAIBLE }}
