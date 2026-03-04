@@ -1,16 +1,22 @@
 name: Workflow with Scripts
 on:
   push:
-    branches: develop
+    branches: [develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1
-        shell: python
+      - id: step1
+        name: Step 1
         run: |
-          print("Installing dependencies...")
-          print("Running tests")
+          echo "Installing dependencies"
+          echo "status=success" >> $GITHUB_OUTPUT
+      - id: step2
+        name: Step 2
+        if: steps.step1.outputs.status == "success"
+        run: |
+          echo "El resultado del paso anterior fue ${{ steps.step1.outputs.status }}"
+          echo "Running tests!"
 
           
