@@ -7,16 +7,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
         # run: |
         #   git init
         #   git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         #   git fetch origin ${{ github.ref }} --depth=1
         #   git checkout FETCH_HEAD
         #   ls -lha
-        uses: actions/checkout@v6.0.2
-      - name: Instlalling dependencies
-        uses: actions/setup-python@6.2.0
+
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14' 
+      - run: print("Hi!")
       # - id: step1
       #   name: Step 1
       #   run: |
