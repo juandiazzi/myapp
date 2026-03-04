@@ -1,0 +1,11 @@
+name: Workflow Repository Dispatch
+on: repository-dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "Building the project..."
+
+        
