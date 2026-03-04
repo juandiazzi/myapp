@@ -14,9 +14,9 @@ jobs:
         #   git fetch origin ${{ github.ref }} --depth=1
         #   git checkout FETCH_HEAD
         #   ls -lha
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.2
       - name: Instlalling dependencies
-        uses: actions/setup-python@6
+        uses: actions/setup-python@6.2.0
       # - id: step1
       #   name: Step 1
       #   run: |
