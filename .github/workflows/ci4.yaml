@@ -1,4 +1,4 @@
-name: Workflow Repository Dispatch
+name: Workflow Repository Dispatch 2
 on: 
   repository_dispatch:
     types: [test-event]
