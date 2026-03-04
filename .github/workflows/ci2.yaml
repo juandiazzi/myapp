@@ -9,4 +9,7 @@ jobs:
       - name: Build
         run: |
           echo SECRET:${{ secrets.SOMETHING_SECRET }}
-          echo VARAIBLE:${{ variables.SOMETHING_VARAIBLE }}
+          echo SECRET:${{ secrets.DB_PASSWORD }}
+          echo VARIABLE ENTORNO:${{ env.SOMETHING_VARAIBLE }}
+          echo VARIABLE REPO:${{ vars.SOMETHING_REPO }}
+          echo CONTEXT:${{ github.ref }}

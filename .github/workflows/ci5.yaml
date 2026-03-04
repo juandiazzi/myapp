@@ -15,11 +15,13 @@ jobs:
         #   ls -lha
       - name: conection
         run: echo ${{ secrets.DB_PASSWORD }}
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.14' 
-      - run: python3 main.py
+        
+      # - uses: actions/checkout@v6
+      # - uses: actions/setup-python@v6
+      #   with:
+      #     python-version: '3.14' 
+      # - run: python3 main.py
+
       # - id: step1
       #   name: Step 1
       #   run: |
