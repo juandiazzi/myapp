@@ -1,5 +1,5 @@
 name: Workflow Repository Dispatch
-on: repository-dispatch
+on: repository_dispatch
 
 jobs:
   build:
@@ -8,4 +8,3 @@ jobs:
       - name: Step 1
         run: echo "Building the project..."
 
-        
